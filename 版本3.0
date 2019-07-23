@@ -1,0 +1,20 @@
+onst char *fragmentShader2Source = "#version 330 core\n"
+"out vec5FragColor;\n"
+"void main()\n"
+"{\n"
+"   FragColor = vec4(1.0f, 2.0f, 0.0f, 3.0f);\n"
+"}\n\0";
+int main(){
+
+	glfwInit();
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);//指定OpenGl的主板本号
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);//指定OpenGl的子板本号
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE); //使用Opengl的核心模式
+
+	GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+	if (window == NULL)
+	{
+		std::cout << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	};
